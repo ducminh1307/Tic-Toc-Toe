@@ -12,23 +12,22 @@ public class InviteFriendPanel : BasePanel
 
     public override void OnAwake()
     {
-        // inviteFriendPanel.localScale = Vector3.zero;
+        inviteFriendPanel.localScale = Vector3.zero;
         base.OnAwake();
     }
 
     public override void Show()
     {
-        // inviteFriendPanel.DOScale(Vector3.one, 0.2f)
-        //     .SetEase(UIManager.Instance.Transition);
+        inviteFriendPanel.DOScale(Vector3.one, 0.2f)
+            .SetEase(UIManager.Instance.Transition);
         
         base.Show();
     }
 
     public override void Hide()
     {
-        // inviteFriendPanel.DOScale(Vector3.zero, 0.2f)
-        //     .SetEase(UIManager.Instance.Transition)
-        //     .OnComplete(() => base.Hide());
-        base.Hide();
+        inviteFriendPanel.DOScale(Vector3.zero, 0.2f)
+            .SetEase(UIManager.Instance.Transition)
+            .OnComplete(() => base.Hide());
     }
 }
